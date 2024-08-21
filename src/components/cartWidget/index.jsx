@@ -1,6 +1,13 @@
-const cartWidget = () => {
+import { Icon } from '@iconify/react';
+
+const CartWidget = () => {
     
-    return 
+    return(
+        <>
+            <span>0</span>
+            <Icon icon="material-symbols:shopping-cart" />
+        </>
+    );
 }
 
-export default cartWidget
+export default CartWidget

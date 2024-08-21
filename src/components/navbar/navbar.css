@@ -1,7 +1,6 @@
 .header{
     display: flex;
-    margin: 0;
-    padding: 15px;
+    padding: 40px 0;
     background-color: rgb(23, 172, 18);
 }
 .navbar{
@@ -11,5 +10,18 @@
 }
 .navbar__menu{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     gap: 15px;
+}
+.navbar__item{
+    padding: .8rem;
+    cursor: pointer;
+}
+.navbar__item:hover{
+    background-color: green;
+    border-radius: 8px;
+}
+.navbar__link{
+    font-size: 1.5em;
 }
