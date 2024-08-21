@@ -1,6 +1,6 @@
-import CartWidget from '../CartWidget';
+import CartWidget from '../CartWidget/cart';
 import logo from '../../assets/beautySeeds.png'
-
+import ItemList from '../ItemList/itemList';
 
 
 function Navbar() {
@@ -12,18 +12,12 @@ function Navbar() {
                     <img src={logo} alt="logo" />
                 </figure>
                 <ul className="navbar__menu">
-                    <li className="navbar__item">
-                        <a className='navbar__link' href=""> Shop</a>
-                    </li>
-                    <li className="navbar__item"> 
-                        <a className='navbar__link' href="">contacto</a>
-                    </li>
-                    <li className="navbar__item"> 
-                        <a className='navbar__link' href="">Newsletter</a>
-                    </li>
-                    <li className="navbar__item" >
+                    <ItemList label= "Shop" />
+                    <ItemList label= "Contacto" />
+                    <ItemList label= "Newsletter" />
+                    <li >
                         <a href=""> 
-                            <cartWidget/> 
+                            <CartWidget cantidad={1}/> 
                         </a>
                     </li>                    
                 </ul>
