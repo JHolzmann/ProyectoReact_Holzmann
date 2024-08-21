@@ -1,4 +1,8 @@
+/*estilo global*/
 
+@import './styles/reset.css';
+@import './styles/shared.css';
 
+/*componentes*/
 
-
+@import './components/navbar/navbar.css';

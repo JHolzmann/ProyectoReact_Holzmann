@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    margin: 0;
+    padding: 15px;
+    background-color: rgb(23, 172, 18);
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar__menu{
+    display: flex;
+    gap: 15px;
+}
