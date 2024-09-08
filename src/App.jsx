@@ -1,11 +1,14 @@
-import Navbar from './components/navbar'
-import './App.css'
-
+import BaseLayout from "./layout/BaseLayout"
+import ItemList from "./components/ItemList"
 
 function App() {
   return (
     <>
-      <Navbar />
+      <BaseLayout>
+        <main>
+          <ItemList />
+        </main>
+      </BaseLayout>
     </>
   )
 }

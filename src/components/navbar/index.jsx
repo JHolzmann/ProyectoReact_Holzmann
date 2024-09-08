@@ -1,30 +1,12 @@
-import CartWidget from '../CartWidget/cart';
-import logo from '../../assets/beautySeeds.png'
-import ItemList from '../ItemList/itemList';
+import LinkButton from "../Button/button";
 
-
-function Navbar() {
+const Navbar = ({links, className, children}) => {
     return (
-        <>
-            <header className="header">
-            <nav className="container navbar">
-                <figure className="navbar__logo">
-                    <img src={logo} alt="logo" />
-                </figure>
-                <ul className="navbar__menu">
-                    <ItemList label= "Shop" />
-                    <ItemList label= "Contacto" />
-                    <ItemList label= "Newsletter" />
-                    <li >
-                        <a href=""> 
-                            <CartWidget cantidad={1}/> 
-                        </a>
-                    </li>                    
-                </ul>
-            </nav>
-            </header>
-        </>
-    );
-}
+    <menu className={`menu ${className}__menu`}>
+        { links.map(link => <li className={`menu__item ${className}__item`}><LinkButton className={className} href={link.href} label={link.label} /></li>) }
+        { children }
+    </menu>
+);
+};
 
 export default Navbar;
