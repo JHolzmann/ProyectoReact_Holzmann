@@ -19,14 +19,10 @@
         height: 100%;
         object-position: center;
         object-fit: contain;
-        animation: fade 0.7s;
-    }
-    &:hover .item__picture--img--1 {
-        display: none;
     }
     a {
         font-size: inherit;
         text-decoration: none;
-        color: inherit;
+        color: white;
     }
 }

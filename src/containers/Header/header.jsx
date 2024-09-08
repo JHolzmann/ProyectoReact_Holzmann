@@ -1,6 +1,6 @@
 import logo from '../../assets/beautySeeds.png';
-import Menu from '../../components/navbar';
-import CartWidget from '../../components/CartWidget';
+import Menu from '../../components/Menu';
+import CartWidget from '../../components/CartWidget/cart';
 
 const Header = () => {
 

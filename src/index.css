@@ -5,5 +5,11 @@
 
 /*componentes*/
 
-@import './components/navbar/navbar.css';
+@import './components/Button/button.css';
 @import './components/CartWidget/cart.css';
+@import './components/Pill/pill.css';
+@import './components/Item/item.css';
+@import './components/ItemList/itemlist.css';
+@import './components/ItemDetail/itemDetail.css';
+@import'./components/Menu/menu.css';
+@import './components/Counter/'

@@ -1,13 +1,13 @@
-import { Icon } from '@iconify/react';
+import { Icon } from '@iconify/react'
+import Pill from '../Pill/pill';
 
-const CartWidget = ({ cantidad }) => {
-    
-    return(
-        <div className='cart-widget'>
-            <span className='pill'>{ cantidad } </span>
-            <Icon className='cart-widget__cart' icon="ph:shopping-cart-thin" width="1.2em" height="1.2em" />
-        </div>
-    );
-}
+const CartWidget = ({quantity}) => {
+    return (
+    <div className='cart-widget'>
+        <Pill quantity={quantity} />
+        <Icon className='cart-widget__cart' icon="clarity:shopping-cart-solid" />
+    </div>
+);
+};
 
-export default CartWidget
+export default CartWidget;

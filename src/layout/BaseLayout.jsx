@@ -1,4 +1,4 @@
-import Header from "../containers/Header";
+import Header from "../containers/Header/header";
 
 const BaseLayout = ({ children }) => {
 
@@ -7,7 +7,7 @@ const BaseLayout = ({ children }) => {
         <Header />
         { children }
         <footer>
-        <p>Footer del site</p>
+        <p>Proyecto Jessica Holzmann Reac js</p>
         </footer>
     </>
 );
