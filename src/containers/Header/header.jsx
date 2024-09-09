@@ -1,21 +1,22 @@
 import logo from '../../assets/beautySeeds.png';
-import Menu from '../../components/Menu';
+import Menu from '../../components/Menu/menu';
 import CartWidget from '../../components/CartWidget/cart';
+
 
 const Header = () => {
 
     const links = [
     {
     label: 'Home',
-    href: '#'
+    href: 'http://localhost:5174/'
     },
     {
     label: 'Tienda',
-    href: '#'
+    href: 'http://localhost:5174/tienda'
     },
     {
     label: 'Contacto',
-    href: '#'
+    href: 'http://localhost:5174/contacto'
     },
 ];
 
