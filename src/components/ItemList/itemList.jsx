@@ -5,17 +5,16 @@ const ItemList = () => {
     let [ items, setItems ] = useState([]);
 
     useEffect(() => {
-        fetch('/src/data/items.json')
+        fetch('/src/data/data.json')
         .then(res => res.json())
         .then(data => setItems(data))
 }, []);
 
     return(
     <section className="items__container container">
-        {items.map(item => <Item {...item} tag="NUEVO"/>)}
+        {items.map((item, i) => <Item key={`item-${i}`} {...item} tag="NUEVO"/>)}
     </section>
 );
-
 }
 
 export default ItemList;

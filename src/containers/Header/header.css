@@ -2,23 +2,53 @@
     display: flex;
     background-color: #2b2b2b;
     color: white;
-    padding: 40px 0;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar__logo img {
+    height: 50px; /* Ajusta la altura del logo */
+    display: block; 
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    align-items: center; /* Alinea los items del navbar */
+    gap: 20px;
+}
+
+.navbar__link {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.navbar__link:hover {
+    background-color: #3fa34d;
+    color: white;
+}
+
+.navbar__link-button {
+    display: flex;
     align-items: center;
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-    }
-    &__item {
-        padding: .8rem;
-        transition: all .3s linear;
-        cursor: pointer;
-        color: white
-    }
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar__link-button:hover {
+    background-color: #3fa34d;
+    color: white;
 }

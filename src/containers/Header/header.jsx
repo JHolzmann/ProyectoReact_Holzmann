@@ -1,4 +1,4 @@
-import logo from '../../assets/beautySeeds.png';
+import logo from '../../../public/img/beautySeeds.png';
 import Menu from '../../components/Menu/menu';
 import CartWidget from '../../components/CartWidget/cart';
 
@@ -8,21 +8,21 @@ const Header = () => {
     const links = [
     {
     label: 'Home',
-    href: 'http://localhost:5174/'
+    href: '/'
     },
     {
     label: 'Tienda',
-    href: 'http://localhost:5174/tienda'
+    href: '/tienda'
     },
     {
     label: 'Contacto',
-    href: 'http://localhost:5174/contacto'
+    href: '/contacto'
     },
 ];
 
     return (
         <header className="header">
-        <nav className="navbar container">
+        <nav className="navbar__container">
         <a className="navbar__logo" href="/">
             <figure className="navbar__img">
             <img src={logo} alt="" />

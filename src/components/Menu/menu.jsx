@@ -1,13 +1,19 @@
-import LinkButton from "../Button/button";
+import { NavLink } from "react-router-dom";
 
-const Menu = ({links, className, children}) => {
-
+const Menu = ({ links, className, children }) => {
     return (
-    <menu className={`menu ${className}__menu`}>
-        { links.map(link => <li className={`menu__item ${className}__item`}><LinkButton className={className} href={link.href} label={link.label} /></li>) }
-        { children }
-    </menu>
-);
+        <menu className={`menu ${className}__menu`}>
+            {links.map((link, i) => {
+                
+                return(
+                <li key={`navlink-${i}`} className={`menu__item ${className}__item`}>
+                    <Navlink to={link.href}>{link.label}</Navlink>
+                </li>
+                )
+            })}
+            {children}
+        </menu>
+    );
 };
 
-export default Menu; 
+export default Menu;
