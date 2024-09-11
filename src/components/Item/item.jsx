@@ -1,7 +1,7 @@
 import Counter from '../Counter/counter';
 import { Link } from "react-router-dom";
 
-const Item = ({ name, img, price, category, href = '#', tag, stock }) => {
+const Item = ({ name, img, price, category, id, tag, stock }) => {
     return (
         <article className="item">
             <Link to={`/detalle/${id}`}>
