@@ -7,7 +7,7 @@ const Menu = ({ links, className, children }) => {
                 
                 return(
                 <li key={`navlink-${i}`} className={`menu__item ${className}__item`}>
-                    <Navlink to={link.href}>{link.label}</Navlink>
+                    <NavLink to={link.href}>{link.label}</NavLink>
                 </li>
                 )
             })}

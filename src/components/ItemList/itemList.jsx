@@ -1,20 +1,28 @@
 import { useState, useEffect } from "react";
 import Item from "../Item/item";
 
-const ItemList = () => {
-    let [ items, setItems ] = useState([]);
+const ItemList = ({ id }) => {
+    const [items, setItems] = useState([]);
+    const [filteredItems, setFilteredItems] = useState([]);
 
     useEffect(() => {
         fetch('/src/data/data.json')
-        .then(res => res.json())
-        .then(data => setItems(data))
-}, []);
+            .then(res => res.json())
+            .then(data => {
+                setItems(data);
+                if (id) {
+                    setFilteredItems(data.filter(item => item.id === id));
+                } else {
+                    setFilteredItems(data);
+                }
+            });
+    }, [id]);
 
-    return(
-    <section className="items__container container">
-        {items.map((item, i) => <Item key={`item-${i}`} {...item} tag="NUEVO"/>)}
-    </section>
-);
+    return (
+        <section className="items">
+            {filteredItems.map((item, i) => <Item key={`item-${i}`} {...item} tag="NUEVO" />)}
+        </section>
+    );
 }
 
 export default ItemList;

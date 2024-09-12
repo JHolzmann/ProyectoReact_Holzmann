@@ -1,4 +1,4 @@
-import logo from '../../assets/img/beautySeeds.png'
+import logo from '../../../public/img/beautySeeds.png'
 import Menu from '../../components/Menu/menu';
 import CartWidget from '../../components/CartWidget/cart';
 

@@ -1,5 +1,5 @@
 .card-image {
-    width: 100%;
+    width: 150px;
     height: 150px;
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
 }
