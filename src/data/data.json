@@ -6,7 +6,7 @@
     "name": "Chemdog",
     "description": "Chemdog es un cruce premiado de OG Kush con Sour Diesel , dos progenitores legendarios que han producido una cepa igualmente prolífica, si no más. ¡Los efectos de esta cepa son fuertes! Con un contenido de THC del 21% y un contenido de CBD del 1,5%, tiene el poder de dejar atónitos incluso a los veteranos más experimentados.",
     "img": {
-    "front": "/public/img/chemdog.png",
+    "front": "/img/chemdog.png",
     "back": ""
     },
     "price": 24.500,
@@ -19,7 +19,7 @@
     "name": "Jack Herer",
     "description": "Es una variedad de cannabis híbrida con un alto contenido de THC y un perfil de terpenos distintivo que le da su aroma y sabor característicos. Su perfil de cannabinoides y terpenos le da una amplia gama de efectos psicoactivos y terapéuticos.",
     "img": {
-    "front": "/public/img/chemdog.png",
+    "front": "/img/chemdog.png",
     "back": ""
     },
     "price": 28.800,
@@ -32,7 +32,7 @@
     "name": "Vainilla Kush",
     "description": "Su aroma y su sabor recuerdan a lavanda y a vainilla, dulces con notas picantes y matices de naranja y de limón. Su efecto es potente y relajante, es una marihuana que ayuda a aliviar la tensión muscular y a disfrutar de un largo descanso.",
     "img": {
-    "front": "/public/img/vanilla-kush.png",
+    "front": "/img/vanilla-kush.png",
     "back": ""
     },
     "price": 20.500,
@@ -45,7 +45,7 @@
     "name": "Wedding Cake",
     "description": "La Wedding Cake es un famoso híbrido de marihuana descendiente de la potente línea genética Cookies. Esta variedad, también conocida como Triangle Mints #23 (o Pink Cookies en Canadá), es un cruce Girl Scout Cookies y Cherry Pie, dos híbridos míticos con aromas y efectos extraordinarios.",
     "img": {
-    "front": "/public/img/wedding-cake.png",
+    "front": "/img/wedding-cake.png",
     "back": ""
     },
     "price": 32.700,
@@ -58,7 +58,7 @@
     "name": "White Widow",
     "description": "La White Widow florece dando lugar a densos cogollos de color verde claro, con su famoso recubrimiento blanco de tricomas repartido en las hojas a su alrededor. Su apariencia no pasa desapercibida, ya que la White Widow suele destacar en cualquier cultivo.",
     "img": {
-    "front": "/public/img/white-widow.png",
+    "front": "/img/white-widow.png",
     "back": ""
     },
     "price": 29.990,
@@ -71,7 +71,7 @@
         "name": "Northern Lights",
         "description": "La Northern Lights es conocida principalmente por su efecto eufórico pero tremendamente relajante, así como por su perfil de sabor dulce, especiado y almizclado, y por su gruesa capa de resina. Al ser una índica casi pura, esta planta es bastante fácil de cultivar, ¡y muy productiva!",
         "img": {
-        "front": "/public/img/notherlight.png",
+        "front": "/img/notherlight.png",
         "back": ""
         },
         "price": 19.800,

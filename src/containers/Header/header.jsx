@@ -1,5 +1,5 @@
-import logo from '../../../public/img/beautySeeds.png'
-import Menu from '../../components/Menu/menu';
+import logo from '../../../public/img/beautySeeds.png';
+import Menu from '../../components/Menu/menu'
 import CartWidget from '../../components/CartWidget/cart';
 
 
@@ -25,7 +25,7 @@ const Header = () => {
         <nav className="navbar__container">
         <a className="navbar__logo" href="/">
             <figure className="navbar__img">
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo" />
             </figure>
         </a>
         <Menu className="navbar" links={links}>

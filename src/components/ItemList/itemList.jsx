@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Item from "../Item/item";
 
-const ItemList = ({ id }) => {
+const ItemList = ({ category }) => {
     const [items, setItems] = useState([]);
     const [filteredItems, setFilteredItems] = useState([]);
 
@@ -10,13 +10,13 @@ const ItemList = ({ id }) => {
             .then(res => res.json())
             .then(data => {
                 setItems(data);
-                if (id) {
-                    setFilteredItems(data.filter(item => item.id === id));
+                if (category) {
+                    setFilteredItems(data.filter(item => item.category === category));
                 } else {
                     setFilteredItems(data);
                 }
             });
-    }, [id]);
+    }, [category]);
 
     return (
         <section className="items">
