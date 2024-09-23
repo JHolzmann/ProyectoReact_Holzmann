@@ -1,0 +1,41 @@
+footer {
+    background-color:  #2b2b2b; 
+    color: white;
+    padding: 20px 0;
+    bottom: 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+footer .navbar {
+    flex: 1;
+}
+
+footer picture img {
+    width: 150px;
+    max-width: 100%;
+}
+
+footer .copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb; 
+}
+
+
+footer .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer .navbar a:hover {
+    color: white; 
+}

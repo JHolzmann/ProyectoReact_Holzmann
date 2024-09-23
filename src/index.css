@@ -3,6 +3,15 @@
 @import './styles/reset.css';
 @import './styles/shared.css';
 
+/*containers*/
+@import './containers/Footer/footer.css';
+@import './containers/Header/header.css';
+
+
+/*pages*/
+@import './pages/Tienda/tienda.css';
+@import './pages/Home/home.css';
+
 /*componentes*/
 
 @import './components/Button/button.css';
@@ -12,6 +21,6 @@
 @import './components/ItemList/itemlist.css';
 @import './components/ItemDetail/itemDetail.css';
 @import './components/Menu/menu.css';
-@import './components/Counter/counter.css'
-
+@import './components/Counter/counter.css';
+@import './components/Spinner/spinner.css'
 
