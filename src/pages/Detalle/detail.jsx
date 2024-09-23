@@ -7,7 +7,7 @@ const Detail = () => {
     let [ item, setItem ] = useState(null);
 
     useEffect(() => {
-    fetch(`/src/data/items.json`)
+    fetch(`/src/data/data.json`)
     .then(res => res.json())
     .then(data => setItem(data.find(item => item.id == id)))
 }, []);

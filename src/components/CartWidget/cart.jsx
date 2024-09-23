@@ -1,10 +1,16 @@
-import { Icon } from '@iconify/react'
-import Pill from '../Pill/pill';
+import { useContext } from "react";
+import { CartContext } from "../../context/cartContext";
 
-const CartWidget = ({quantity}) => {
+import { Icon } from '@iconify/react'
+import Pill from '../pill/pill';
+
+const CartWidget = () => {
+    const { cartItems } = useContext(CartContext);
+    console.log(cartItems);
+
     return (
     <div className='cart-widget'>
-        <Pill quantity={quantity} />
+        <Pill quantity={cartItems.length} />
         <Icon className='cart-widget__cart' icon="clarity:shopping-cart-solid" />
     </div>
 );
