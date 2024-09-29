@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react'; 
+import { CartContext } from "../../context/cartContext/";
 
-const ItemDetail = ({ name, img, price, description, category }) => {
-    
-    const [quantity, setQuantity] = useState(1);
+const ItemDetail = ({ id, name, img, price, description, category }) => {
+    let [ quantity, setQuantity ] = useState(0);
+    const { addItem } = useContext(CartContext);
 
-    
-    const handleIncrease = () => {
-        setQuantity(quantity + 1);
-    };
+    const increase = () => {
+        setQuantity(quantity++);
+    }
 
-    
-    
-    const handleDecrease = () => {
-        if (quantity > 1) {
-            setQuantity(quantity - 1);
-        }
-    };
+    const decrease = () => {
+        quantity < 1 ? setQuantity(0) : setQuantity(quantity--);
+    }
+
+    const addItemToCart = () => {
+        addItem({id, name, img, price, description, category, quantity });
+    }
 
     return (
         <section className="item-detail">
@@ -37,7 +37,7 @@ const ItemDetail = ({ name, img, price, description, category }) => {
                         <button
                             className="item-detail__form--btn"
                             type="button"
-                            onClick={handleDecrease}
+                            onClick={decrease}
                         >
                             -
                         </button>
@@ -50,15 +50,16 @@ const ItemDetail = ({ name, img, price, description, category }) => {
                         <button
                             className="item-detail__form--btn"
                             type="button"
-                            onClick={handleIncrease}
+                            onClick={increase}
                         >
                             +
                         </button>
                     </div>
                     <input
                         className="item-detail__form--submit"
-                        type="submit"
+                        type="button"
                         value="Agregar al Carrito"
+                        onClick={addItemToCart}
                     />
                 </form>
             </article>

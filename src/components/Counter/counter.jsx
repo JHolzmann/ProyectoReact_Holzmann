@@ -1,7 +1,6 @@
-import { useState } from "react";
-import './counter.css';
+import React, { useState } from 'react';
 
-function Counter({ initial, stock, onAdd }) {
+const Counter = ({ initial, stock, onAdd }) => {
     const [count, setCount] = useState(initial);
 
     const increase = () => {
@@ -16,19 +15,21 @@ function Counter({ initial, stock, onAdd }) {
         }
     };
 
-    const addToCart = () => {
-        onAdd(count);
+    const handleAdd = () => {
+        if (stock > 0) {
+            onAdd(count); 
+        }
     };
 
     return (
-        <div>
+        <div className="counter">
             <button onClick={decrease}>-</button>
             <span>{count}</span>
             <button onClick={increase}>+</button>
-            <button onClick={addToCart}>Agregar al carrito</button>
-            <p>Stock disponible: {stock}</p>
+            <button onClick={handleAdd}>Agregar al carrito</button>
         </div>
     );
-}
+};
 
 export default Counter;
+

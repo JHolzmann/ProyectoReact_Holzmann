@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <BaseLayout>
           <Routes>
-            <Route path="/" element={<Home condition={false}/>}/>
+            <Route path="/" element={<Home />}/>
             <Route path="/tienda" element={<Store />}/>
             <Route path="/tienda/:categoria" element={<Store />}/>
             <Route path="/detalle/:id" element={<Detail />}/>
