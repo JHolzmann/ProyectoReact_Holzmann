@@ -1,6 +1,7 @@
 import logo from '../../../public/img/beautySeeds.png';
 import Menu from '../../components/Menu/menu'
 import CartWidget from '../../components/CartWidget/cart';
+import { Link } from 'react-router-dom';
 
 
 const Header = () => {
@@ -30,9 +31,9 @@ const Header = () => {
         </a>
         <Menu className="navbar" links={links}>
             <li>
-            <a href="" className='navbar__link-button'>
+            <Link to={"/carrito"} className='navbar__link-button'>
             <CartWidget quantity={0} />
-            </a>
+            </Link>
             </li>
         </Menu>
         </nav>

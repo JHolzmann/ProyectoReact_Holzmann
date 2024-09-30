@@ -3,7 +3,7 @@ import Item from "../Item/item";
 import { CartContext } from "../../context/cartContext";
 
 const ItemList = ({ items }) => {
-    const { cart } = useContext(CartContext); 
+    const {} = useContext(CartContext); 
 
     return (
         <section className="items__container container">
