@@ -16,7 +16,7 @@ Instalación
 
 -Clonar el repositorio:
 
-git clone https://github.com/tu-usuario/ProyectoReact_Holzmann.git
+git clone https://github.com/JHolzmann/ProyectoReact_Holzmann.git
 
 -Navegar al directorio del proyecto:
 
