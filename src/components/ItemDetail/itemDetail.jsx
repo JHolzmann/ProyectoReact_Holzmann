@@ -1,21 +1,33 @@
 import React, { useState, useContext } from 'react'; 
 import { CartContext } from "../../context/cartContext/";
 
-const ItemDetail = ({ id, name, img, price, description, category }) => {
-    let [ quantity, setQuantity ] = useState(0);
+const ItemDetail = ({ id, name, img, price, description, category, stock }) => {
     const { addItem } = useContext(CartContext);
+    const [quantity, setQuantity] = useState(1); // Inicializa con 1 por defecto
 
-    const increase = () => {
-        setQuantity(quantity++);
-    }
+    // Función para manejar el aumento de la cantidad
+    const increaseQuantity = () => {
+        if (quantity < stock) {
+            setQuantity(quantity + 1);
+        }
+    };
 
-    const decrease = () => {
-        quantity < 1 ? setQuantity(0) : setQuantity(quantity--);
-    }
+    // Función para manejar la disminución de la cantidad
+    const decreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
 
-    const addItemToCart = () => {
-        addItem({id, name, img, price, description, category, quantity });
-    }
+    // Función para agregar al carrito
+    const handleAdd = () => {
+        if (quantity <= stock && quantity > 0) {
+            addItem({ id, name, img, price, description, category, quantity });
+            console.log(`${quantity} ${name} agregado(s) al carrito`);
+        } else {
+            console.log("Cantidad no válida");
+        }
+    };
 
     return (
         <section className="item-detail">
@@ -37,10 +49,8 @@ const ItemDetail = ({ id, name, img, price, description, category }) => {
                         <button
                             className="item-detail__form--btn"
                             type="button"
-                            onClick={decrease}
-                        >
-                            -
-                        </button>
+                            onClick={decreaseQuantity}
+                        >-</button>
                         <input
                             className="item-detail__form--input"
                             type="text"
@@ -50,16 +60,14 @@ const ItemDetail = ({ id, name, img, price, description, category }) => {
                         <button
                             className="item-detail__form--btn"
                             type="button"
-                            onClick={increase}
-                        >
-                            +
-                        </button>
+                            onClick={increaseQuantity}
+                        >+</button>
                     </div>
                     <input
                         className="item-detail__form--submit"
                         type="button"
                         value="Agregar al Carrito"
-                        onClick={addItemToCart}
+                        onClick={handleAdd}
                     />
                 </form>
             </article>

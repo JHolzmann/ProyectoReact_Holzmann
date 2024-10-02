@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 const Item = ({ name, img, price, category, id, tag, stock }) => {
     const { addItem } = useContext(CartContext);
 
-    
     const handleAddToCart = (count) => {
-        
-        addItem({ id, name, img, price, category, quantity: count });
-        console.log(`${count} ${name} agregados al carrito`);
+        if (stock > 0) {
+            addItem({ id, name, img, price, category, stock, quantity: count });
+            alert(`${count} ${name} agregados al carrito`);
+        } else {
+            alert(`No hay stock disponible para ${name}`);
+        }
     };
 
     return (
@@ -27,7 +29,6 @@ const Item = ({ name, img, price, category, id, tag, stock }) => {
                 </div>
             </Link>
 
-            
             <Counter
                 initial={1}
                 stock={stock}

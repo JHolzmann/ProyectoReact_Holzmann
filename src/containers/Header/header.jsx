@@ -24,16 +24,14 @@ const Header = () => {
     return (
         <header className="header">
         <nav className="navbar__container">
-        <a className="navbar__logo" href="/">
+        <Link className="navbar__logo" href="/">
             <figure className="navbar__img">
             <img src={logo} alt="logo" />
             </figure>
-        </a>
+        </Link>
         <Menu className="navbar" links={links}>
             <li>
-            <Link to={"/carrito"} className='navbar__link-button'>
             <CartWidget quantity={0} />
-            </Link>
             </li>
         </Menu>
         </nav>

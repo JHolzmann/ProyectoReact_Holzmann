@@ -16,20 +16,39 @@ const Counter = ({ initial, stock, onAdd }) => {
     };
 
     const handleAdd = () => {
-        if (stock > 0) {
+        if (stock > 0 && onAdd) {
             onAdd(count); 
         }
     };
 
     return (
         <div className="counter">
-            <button onClick={decrease}>-</button>
+            <button 
+                onClick={decrease} 
+                disabled={count === 1} 
+                aria-label="Disminuir cantidad"
+            >
+                -
+            </button>
             <span>{count}</span>
-            <button onClick={increase}>+</button>
-            <button onClick={handleAdd}>Agregar al carrito</button>
+            <button 
+                onClick={increase} 
+                disabled={count === stock} 
+                aria-label="Aumentar cantidad"
+            >
+                +
+            </button>
+            <button 
+                onClick={handleAdd} 
+                disabled={stock === 0 || !onAdd} 
+                aria-label="Agregar al carrito"
+            >
+                Agregar al carrito
+            </button>
         </div>
     );
 };
 
 export default Counter;
+
 
