@@ -19,7 +19,7 @@ const CartItem = ({ item, onRemove, onUpdateQuantity }) => {
                 <input 
                     className="cart-item__quantity"
                     type="number" 
-                    value={item.quantity || 1} // Proporciona un valor por defecto si no hay cantidad
+                    value={item.quantity || 1} 
                     onChange={handleQuantityChange} 
                     min="1" 
                 />
