@@ -1,25 +1,31 @@
 import React from 'react';
-import './CartItem.css'; 
+import './cartItem.css'; 
 
 const CartItem = ({ item, onRemove, onUpdateQuantity }) => {
+    
     const handleQuantityChange = (event) => {
-        const newQuantity = parseInt(event.target.value);
-        onUpdateQuantity(item.id, newQuantity);
+        const newQuantity = parseInt(event.target.value, 10); // Asegúrate de que se pase la base 10
+        if (!isNaN(newQuantity) && newQuantity > 0) {
+            onUpdateQuantity(item.id, newQuantity);
+        }
     };
 
     return (
         <li className="cart-item">
-            <img src={item.img.front} alt={item.name} />
-            <div>
-                <h3>{item.name}</h3>
-                <p>Precio: ${item.price}</p>
+            <img className="cart-item__img" src={item.img} alt={item.name} />
+            <div className="cart-item__details">
+                <h3 className="cart-item__name">{item.name}</h3>
+                <p className="cart-item__price">Precio: ${item.price}</p>
                 <input 
+                    className="cart-item__quantity"
                     type="number" 
-                    value={item.quantity} 
+                    value={item.quantity || 1} // Proporciona un valor por defecto si no hay cantidad
                     onChange={handleQuantityChange} 
                     min="1" 
                 />
-                <button onClick={() => onRemove(item.id)}>Eliminar</button>
+                <button className="cart-item__remove" onClick={() => onRemove(item.id)}>
+                    Eliminar
+                </button>
             </div>
         </li>
     );

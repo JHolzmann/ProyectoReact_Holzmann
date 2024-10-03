@@ -18,6 +18,12 @@ const Cart = () => {
         clearCart();
     };
 
+    const handleAcceptPurchase = () => {
+        
+        alert("¡Compra aceptada!");
+        clearCart(); 
+    };
+
     const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
     return (
@@ -39,6 +45,7 @@ const Cart = () => {
                     </ul>
                     <h2>Total: ${totalAmount.toFixed(2)}</h2>
                     <button onClick={handleClearCart}>Limpiar Carrito</button>
+                    <button onClick={handleAcceptPurchase}>Aceptar Compra</button> 
                 </>
             )}
         </div>
@@ -46,3 +53,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

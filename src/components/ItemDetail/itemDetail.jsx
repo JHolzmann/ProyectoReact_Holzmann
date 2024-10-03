@@ -3,23 +3,23 @@ import { CartContext } from "../../context/cartContext/";
 
 const ItemDetail = ({ id, name, img, price, description, category, stock }) => {
     const { addItem } = useContext(CartContext);
-    const [quantity, setQuantity] = useState(1); // Inicializa con 1 por defecto
+    const [quantity, setQuantity] = useState(1); 
 
-    // Función para manejar el aumento de la cantidad
+    
     const increaseQuantity = () => {
         if (quantity < stock) {
             setQuantity(quantity + 1);
         }
     };
 
-    // Función para manejar la disminución de la cantidad
+    
     const decreaseQuantity = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1);
         }
     };
 
-    // Función para agregar al carrito
+    
     const handleAdd = () => {
         if (quantity <= stock && quantity > 0) {
             addItem({ id, name, img, price, description, category, quantity });
@@ -34,7 +34,7 @@ const ItemDetail = ({ id, name, img, price, description, category, stock }) => {
             <picture className="item-detail__picture">
                 <img
                     className="item-detail__picture--img item-detail__picture--img--1"
-                    src={`${img?.front}`}
+                    src={`../../../public/${img}`}
                     alt={`${name} - seed`}
                 />
             </picture>
